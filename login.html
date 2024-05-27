@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="login.js" defer></script>
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="assets/login4.jpg" alt="">
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Entrar</div>
+          <form action="#">
+            <div class="user">
+                <div class="radio">
+                    <div id="personal">
+                        <input type="radio" id="personal" name="role" value="personal">
+                        Personal
+                    </div>
+                </div>
+                <div id="aluno">
+                    <div class="radio">
+                        <input type="radio" id="aluno" name="role" value="aluno">
+                    Aluno
+                    </div>
+                </div>
+            </div>
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="E-mail" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Senha" required>
+              </div>
+              <div class="text"><a href="#">Esqueceu a Senha?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Entrar">
+              </div>
+              <div class="text sign-up-text">Ainda não tem uma conta?<label for="flip"> Cadastre-se </label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Cadastre-se</div>
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nome" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="E-mail" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Senha" required id="passInput"  onkeyup="verifyPass()"
+                oninput="showInfo()">
+              </div>
+              <div class="info">
+                <div class="description-info"><span>A senha deve conter:</span></div>
+                <div class="feed"><i class="fa-solid fa-circle-exclamation"></i>Pelo menos 8 caracteres</div>
+                <div class="feed"><i class="fa-solid fa-circle-exclamation"></i>Pelo Menos 1 letra Maiúscula</div>
+                <div class="feed"><i class="fa-solid fa-circle-exclamation"></i>Pelos Menos 1 número</div>
+                <div class="feed"><i class="fa-solid fa-circle-exclamation"></i>Pelo Menos 1 caratere especial: @#$%&!</div>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Cadastrar">
+              </div>
+              <div class="text sign-up-text">Já tem uma conta? <label for="flip"> Faça Login</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
